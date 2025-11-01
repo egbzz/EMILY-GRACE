@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Best Video – Watch Now</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ff8fb1, #ffdde1);
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    h1 { font-size: 2em; margin-bottom: 10px; }
+    p { font-size: 1.1em; margin-bottom: 15px; }
+    .ad {
+      width: 100%;
+      max-width: 728px;
+      height: auto;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 10px 0;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9em;
+      padding: 10px;
+    }
+    .countdown { font-size: 2.5em; font-weight: bold; margin-bottom: 20px; }
+    button {
+      background: #fff;
+      color: #ff4d6d;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+    button:hover { background: #ff4d6d; color: #fff; transform: scale(1.05); }
+    footer { font-size: 0.8em; color: rgba(255, 255, 255, 0.8); margin-top: 10px; }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5em; }
+      .countdown { font-size: 2em; }
+      button { padding: 10px 25px; font-size: 0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Free Best Video – Watch Now 💖</h1>
+
+  <!-- 1️⃣ Native Banner -->
+  <div class="ad" id="ad1">[ Your Native Banner Ad Code Here ]</div>
+
+  <p>Your video will start soon...</p>
+  <div class="countdown" id="countdown">10</div>
+
+  <!-- 2️⃣ Social Bar -->
+  <div class="ad" id="socialBar">[ Your Social Bar Ad Code Here ]</div>
+
+  <button id="watchNow">Watch Now</button>
+
+  <!-- Footer -->
+  <footer>© 2025 | Love Moments</footer>
+
+  <script>
+    const link = "https://1024terabox.com/s/1nIPl47TbA2leOP5b4GBmqw";
+    let timeLeft = 10;
+    const countdown = document.getElementById("countdown");
+    const btn = document.getElementById("watchNow");
+
+    // Popunder function
+    function openPopunder() {
+      window.open('https://example-popunder.com', '_blank', 'width=1,height=1,left=-1000,top=-1000');
+    }
+
+    // Countdown logic
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdown.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        openPopunder(); // Trigger popunder
+        window.location.href = link;
+      }
+    }, 1000);
+
+    // Watch Now button
+    btn.addEventListener("click", () => {
+      openPopunder(); // Trigger popunder
+      window.location.href = link;
+    });
+  </script>
+</body>
+</html>
